@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>oauth2-server</title>
+
+
+</head>
+<body>
+<div>
+    <a href="http://localhost:8080/oauth/authorize?client_id=demo-client&response_type=code&redirect_uri=http://localhost:8081/oauth2-server/login">登录</a><br/>
+    <span th:text="'当前认证用户：' + ${username}"></span><br/>
+    获取的token:<br/>
+    <span th:text="${accessToken}"></span>
+</div>
+</body>
+</html>

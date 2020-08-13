@@ -1,0 +1,20 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /oauth2-server
+
+security:
+  oauth2:
+    client:
+      client-id: demo-client
+      client-secret: demo-secret
+      user-authorization-uri: http://localhost:8080/oauth/authorize
+      access-token-uri: http://localhost:8080/oauth/token
+    resource:
+      jwt:
+        key-uri: http://localhost:8080/oauth/token_key
+        key-value: demo
+    authorization:
+      check-token-access: http://localhost:8080/oauth/check_token
+
+
